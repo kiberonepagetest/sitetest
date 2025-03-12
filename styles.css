@@ -1,0 +1,430 @@
+/* это в styles.css */
+:root{
+--primary-color: rgb(250, 106, 66);
+}
+
+body{
+    margin:0;
+    overflow-x: hidden;
+    & hr{
+        width: 200px;
+        margin: 3px 0;
+        border: 1px solid var(--primary-color);
+    }
+    
+    & button{
+        min-width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        font: 20px "Rubik";
+        border: none;
+    }
+}
+
+
+.hero{
+    height: 80vh;
+    box-sizing: border-box;
+    background-image: url("https://i.pinimg.com/originals/21/13/64/211364232615266accbace69bb20df3d.jpg");
+    background-color: rgba(0, 0, 0, 0.67);
+    background-size: cover;
+    background-blend-mode: overlay; 
+    color:white; /* цвет текста внутри этой секции - белый */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:15vh 0;
+
+    & .intro{
+        margin-left: 10vw;
+    }
+    
+    
+    
+    & h3{
+        font: 60px  "Pacifico";
+    }
+    
+    & p{
+        font: 20px "Rubik";
+    }
+
+    & .reserve_form{
+        
+        width: 70vw;
+        height: 150px;
+
+        display: grid;
+        grid-template-columns: 10vw repeat(4,1fr) 0.5fr;
+        font: 20px "Rubik";
+
+        & .form-input-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:10px;
+            color: black;
+            background: white;
+
+            & *{
+                width: 60%;
+            }
+            
+
+            & input{
+                outline: 0;
+                border:0;
+                border-bottom: 1px solid black;
+            }
+
+        }
+
+        & button{
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}
+
+
+
+header{
+    z-index: 1;
+    display: block flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 0 10vw;
+    width: 100vw;
+    height: 80px;
+    font: 22px "Rubik";
+    color:whitesmoke;
+    background-color: rgba(0, 0, 0, 0.33);
+
+    & #login{
+        background: transparent;
+        color: whitesmoke;
+    }
+    
+    & #sign_up{
+        background: var(--primary-color);
+        color:black;
+    }
+    
+    & nav > a{
+        margin: 0 5px;
+
+        &:link,
+        &:visited{
+            color:whitesmoke;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active{
+            color: var(--primary-color);
+            text-decoration: underline var(--primary-color);
+        }
+    }
+
+
+    & .logo > a > img{
+    max-height:80px;
+}
+
+}
+
+
+
+
+.sections-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+section{
+    width: 80vw;
+    padding: 100px 0;
+
+
+    & .section-intro-wrapper{
+        display: block flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        margin-bottom: 5vh;
+    }
+
+    & button{
+        display: inline-flex;
+        align-items: center; 
+        justify-content: center;
+        color: whitesmoke;
+        font: 200 40px "Rubik";
+    }
+    
+    & #left{
+        background:black;
+    }
+    & #right{
+        background: var(--primary-color);
+    }
+
+    & h3{
+        font: 50px "Roboto Mono"; 
+        margin: 0;
+    }
+    
+    & p{
+        font: 20px "Roboto Mono";
+        margin: 0;
+    }
+}
+
+
+.cards-wrapper{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.card{
+    width: 400px;
+    height: 600px;
+    border-radius:20px;
+    margin: 0 20px 0 20px;
+    background-size: cover;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    background-blend-mode: overlay;
+    overflow: hidden;
+
+    &:first-child{
+        margin-left:0;
+    }
+    
+    & p {
+    color:inherit;
+    font:200 20px "Roboto Mono";
+
+    }
+
+    & h3 {
+    color:inherit;
+    font:500 30px "Rubik";
+    }
+}
+
+
+#popular-destinations{ 
+    & .card{
+        color: aliceblue;
+        gap: 10px;
+    }
+
+    
+
+    & #card1{
+        background: center/ cover url(https://i.pinimg.com/736x/53/ab/43/53ab43f90e1f275abdd8117931501280.jpg) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+        
+    }
+
+    & #card2{
+        background: center/ cover url(https://i.playground.ru/e/1gneTyZUI53IiOkCZkGC_A.png) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+        
+    }
+
+    & #card3{
+        background: center/ cover url( https://cdn.idealo.com/folder/Product/201425/9/201425908/s1_produktbild_max_8/elden-ring-launch-edition-pc.jpg ) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+
+    }
+
+    & #card4{
+        background: center/ cover url( https://avatars.mds.yandex.net/get-mpic/5236177/img_id342475096076769302.jpeg/orig) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+
+    }
+
+    & #card5{
+        background: center/ cover url(https://i.pinimg.com/originals/13/57/71/13577173a0f2a72904c68e92cd4f0139.jpg ) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+
+    }
+
+    & #card6{
+        background: center/ cover url( https://i.pinimg.com/originals/6e/80/e4/6e80e4f62b6566efbb23ec0b4b1188bb.jpg) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+
+    }
+
+    & #card7{
+        background: center/ cover url( https://avatars.mds.yandex.net/i?id=38ebb3d112d5325b6202ea17b4f3953b_l-4937356-images-thumbs&n=13 ) , linear-gradient( to top, rgba(0,0,0,0.7), transparent 50%);
+
+    }
+
+}
+
+#special-offers{
+    & .section-intro-wrapper{
+        flex-direction: row-reverse;
+
+        & .section-intro-text{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+    }
+
+    & .card{
+        color: black;
+        padding: 0px;
+        height: 450px;
+
+        & img{
+            height: 50%;
+
+        }
+
+        & .card-inner-text{
+
+            padding:15px;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #FFF8F1;
+            
+            & p{
+                
+            font: 100 16px "Roboto Mono";
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+            line-clamp: 2;
+            }
+
+
+            & .card-down-text{
+                display: block flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                
+            
+                & .price{
+                    color: var(--primary-color);
+                }
+
+                & button{
+                    color: black;
+                    font: 20px "Rubik";
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+#trip-planner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    & .section-intro-text{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        
+        
+
+        & button{
+            max-width: fit-content;
+            align-self: center;
+            height: 60px;
+            background-color: var(--primary-color);
+            padding: 5px 10px;
+        }
+    }
+
+    & .cards-wrapper{
+        width: 60%;
+        overflow-y: visible;
+        overflow-x: clip ;
+
+        & .card{
+            height: 500px;
+            padding: 0;
+            background-color: aquamarine;
+            overflow: visible;
+            transition-duration: 0.5s;
+        
+            & img{
+                height: inherit;
+                width: inherit;
+                border-radius: inherit;
+                object-fit: cover;
+            } 
+
+            & .card-inner-text{
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                transition-duration: inherit;
+            }
+
+            &:hover{
+                transform: translateY(-150px);  
+                
+                & .card-inner-text{
+                    opacity: 1;
+                    transform: translateY(130%);
+                }
+            }
+        } 
+    }
+}
+
+
+
+#our-blog {
+    & .section-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2vw;
+
+        & .card{
+            width: 60vh;
+            height: 50vh;
+            background: center/ cover url(https://avatars.mds.yandex.net/i?id=1166da2656942a98ab10fde00beadd113092ee57-7760121-images-thumbs&n=13) no-repeat;
+            border-radius: 20px;
+        }
+
+        & .section-inner-text{
+            width: 58vw;
+   
+            a:link,
+            a:visited,
+            a:hover,
+            a:active{
+                font: 200 20px "Roboto Mono";
+                color:var(--primary-color);
+                text-decoration: none;
+            }
+        }
+
+        
+    }
+}
